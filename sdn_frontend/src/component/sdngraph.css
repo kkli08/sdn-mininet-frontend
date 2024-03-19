@@ -13,3 +13,14 @@
     gap: 1vw; /* Space between buttons */
     padding: 1vw; /* Space around the entire group for a bit of breathing room */
 }
+
+.stepBar {
+    position: fixed; /* Use 'absolute' if you don't want it fixed during scroll */
+    top: 0; /* Align to the top edge of the viewport */
+    left: 0; /* Align to the right edge of the viewport */
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack children vertically */
+    gap: 1vw; /* Space between buttons */
+    padding: 1vw; /* Space around the entire group for a bit of breathing room */
+    width: 20%;
+}
