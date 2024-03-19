@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+.Home-title {
+    font-size: 2vw;
+    text-transform: uppercase;
+    text-align: center; /* 中心对齐标题 */
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    cursor: default;
+    font-family: 'EB Garamond', serif;
+}
