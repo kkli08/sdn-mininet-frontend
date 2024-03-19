@@ -26,14 +26,32 @@
   justify-content: center;
   align-items: center;
   cursor: grab;
+  border-color: DarkOliveGreen;
+  color: DarkOliveGreen;
 }
 
 .dndflow .dndnode.input {
-  border-color: red;
+  border-color: black;
+  color: black;
 }
 
 .dndflow .dndnode.output {
   border-color: green;
+}
+
+.dndflow .dndnode.router {
+  border-color: DarkSeaGreen;
+  color: DarkSeaGreen;
+}
+
+.dndflow .dndnode.coreswitch {
+  border-color: purple;
+  color: purple;
+}
+
+.dndflow .dndnode.host {
+  border-color: chocolate;
+  color: chocolate;
 }
 
 .dndflow .reactflow-wrapper {

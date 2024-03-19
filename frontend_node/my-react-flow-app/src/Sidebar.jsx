@@ -12,10 +12,16 @@ export default () => {
       <div className="dndnode input" onDragStart={(event) => onDragStart(event, 'input')} draggable>
         SDN Controller
       </div>
+      <div className="dndnode coreswitch" onDragStart={(event) => onDragStart(event, 'coreSwitch')} draggable>
+        Core Switch
+      </div>
+      <div className="dndnode router" onDragStart={(event) => onDragStart(event, 'router')} draggable>
+        Router
+      </div>
       <div className="dndnode" onDragStart={(event) => onDragStart(event, 'default')} draggable>
         OpenFlow Switch
       </div>
-      <div className="dndnode" onDragStart={(event) => onDragStart(event, 'hostGroups')} draggable>
+      <div className="dndnode host" onDragStart={(event) => onDragStart(event, 'hostGroups')} draggable>
         Host Groups
       </div>
     </aside>

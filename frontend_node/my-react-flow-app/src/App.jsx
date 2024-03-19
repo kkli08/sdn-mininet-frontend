@@ -16,7 +16,7 @@ import Sidebar from './Sidebar';
 import './index.css';
 
 // custom nodes: https://reactflow.dev/learn/customization/custom-nodes
-import hostGroupsNodes from './componentNodes.jsx';
+import { hostGroupsNodes, routerNodes, coreSwitchNodes } from './componentNodes';
 import './componentNodes.css';
 
 const initialNodes = [
@@ -30,11 +30,11 @@ const initialNodes = [
   },
   {
     id: 'core_switch',
-    type: 'default',
+    type: 'coreSwitch',
     data: {
         label: 'Core Switch'
     },
-    position: { x: 250, y: 50 },
+    position: { x: 250, y: 100 },
   },
 ];
 
@@ -48,7 +48,11 @@ const initialEdges = [
 
 // we define the nodeTypes outside of the component to prevent re-renderings
 // you could also use useMemo inside the component
-const nodeTypes = { hostGroups: hostGroupsNodes };
+const nodeTypes = {
+    hostGroups: hostGroupsNodes,
+    router: routerNodes,
+    coreSwitch: coreSwitchNodes,
+};
 
 let id = 0;
 const getId = () => `dndnode_${id++}`;
@@ -90,14 +94,18 @@ const DnDFlow = () => {
 
       var node_label = type;
       if (type == 'input') {
-        node_label = "Router";
+        node_label = "SDN Controller";
       } else if (type == "default") {
         node_label = "OpenFlow Switch";
-      } else if (type == "hostGroups" ){
+      } else if (type == "hostGroups" ) {
         node_label = "Number of Host(s): ";
+      } else if (type == "router"){
+        node_label = "Router";
+      } else if (type == "coreSwitch") {
+        node_label = "Core Switch";
       } else {
-        alert("TO BE IMPLEMENTED!")
-      }
+        alert("TO BE IMPLEMENTED!");
+      };
 
       const newNode = {
         id: getId(),

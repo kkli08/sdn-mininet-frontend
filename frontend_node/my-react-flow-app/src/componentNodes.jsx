@@ -3,7 +3,7 @@ import { Handle, Position } from 'reactflow';
 
 const handleStyle = { left: 10 };
 
-function hostGroupsNodes({ data, isConnectable }) {
+export function hostGroupsNodes({ data, isConnectable }) {
   const onChange = useCallback((evt) => {
     console.log(evt.target.value);
   }, []);
@@ -15,16 +15,30 @@ function hostGroupsNodes({ data, isConnectable }) {
         <label htmlFor="text">Number of Host(s):</label>
         <input id="text" name="numHosts" onChange={onChange} className="nodrag" />
       </div>
-      <Handle
-        type="source"
-        position={Position.Bottom}
-        id="a"
-        style={handleStyle}
-        isConnectable={isConnectable}
-      />
-      <Handle type="source" position={Position.Bottom} id="b" isConnectable={isConnectable} />
     </div>
   );
 }
 
-export default hostGroupsNodes;
+export function routerNodes({ data, isConnectable }) {
+  return (
+    <div className="router-nodes">
+      <Handle type="target" position={Position.Top} isConnectable={isConnectable} />
+      <div>
+        <label>Router</label>
+      </div>
+      <Handle type="source" position={Position.Bottom} isConnectable={isConnectable} />
+    </div>
+  );
+}
+
+export function coreSwitchNodes({ data, isConnectable }) {
+  return (
+    <div className="core-switch-nodes">
+      <Handle type="target" position={Position.Top} isConnectable={isConnectable} />
+      <div>
+        <label>Core Switch</label>
+      </div>
+      <Handle type="source" position={Position.Bottom} isConnectable={isConnectable} />
+    </div>
+  );
+}

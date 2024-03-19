@@ -3,19 +3,52 @@
   border: 1px solid #eee;
   padding: 5px;
   border-radius: 5px;
+  border-color: chocolate;
   background: white;
 }
 
 .host-group-nodes label {
   display: block;
-  color: #777;
+  color: chocolate;
   font-size: 12px;
 }
 
-.host-group-nodes {
-  height: 50px;
-  border: 1px solid #eee;
-  padding: 5px;
-  border-radius: 5px;
-  background: white;
+.core-switch-nodes {
+  height: 20px;
+  width: 100px;
+  padding: 4px;
+  border: 1px solid;
+  border-radius: 2px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  border-color: purple;
+}
+
+.core-switch-nodes label {
+  display: block;
+  color: purple;
+  font-size: 12px;
+}
+
+.router-nodes {
+  height: 20px;
+  width: 50px;
+  padding: 4px;
+  border: 1px solid;
+  border-radius: 2px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  border-color: DarkSeaGreen;
+}
+
+.router-nodes label {
+  display: block;
+  color: DarkSeaGreen;
+  font-size: 12px;
 }
