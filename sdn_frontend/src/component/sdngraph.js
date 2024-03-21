@@ -130,6 +130,7 @@ function Flow() {
     
     // Update here to directly print the current state of networkJson
     const debugNetwork = useCallback(() => {
+        window.open('/sdn_paper.pdf', '_blank');
         console.log('Current Network JSON:', JSON.stringify(networkJson, null, 2));
     }, [networkJson]);
 
@@ -154,7 +155,7 @@ function Flow() {
                 <Button type="primary" onClick={() => addNode('Router')}>Router</Button>
                 <Button type="primary" onClick={() => addNode('Host')}>Host</Button>
                 <Button type="primary" danger onClick={sendRequest}>Send Request</Button>
-                <Button danger onClick={debugNetwork}>Debug</Button>
+                <Button danger onClick={debugNetwork}>Paper</Button>
             </div>
 
             <div className='stepBar'>
